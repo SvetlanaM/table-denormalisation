@@ -11,7 +11,7 @@ variants = []
 #csv header
 headers = ["document_id", "variant_id"]
 
-with open("./data/in/tables/*.csv") as infile, open("./data/in/tables/*.-out.csv") as outfile:
+with open("./data/in/tables/*.csv", "r") as infile, open("./data/in/tables/" + infile + ".-out.csv", "w") as outfile:
     reader = csv.reader(infile)
     writer = csv.writer(outfile)
 
